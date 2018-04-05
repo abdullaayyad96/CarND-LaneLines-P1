@@ -1,11 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
@@ -21,8 +15,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
-
+### 1. Pipeline Description:
 
 My pipeline consisted of 8 main steps:
 
@@ -59,13 +52,13 @@ The below pictures are examples on the perfomance of the developed code:
 ![Alt text](./test_images_output/solidYellowCurve.jpg?raw=true "SolidYellowCurve")
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with the current pipeline
 
 One of the shortcomings of my current pipeline is that the y values of the ends of the extrapolated right and left lines are kept constant and rather the x parameters of the ends are changed. It would be better if both x and y parameters changed dynamically. Also, a lot of fixed parameters were used in steps like: canny edge detection, hough line detection and region masking. It would be better if these parameters changed dynamically to ensure better performance and lane detection quality.
 
 Another shortcoming is that the current pipeline only works with straight lines and the results under curved lane lines and other shapes are not guaranteed.
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to the pipeline
 
 As stated above, in order to address the shortcomings of the current pipeline:
 * Dynamic and adaptive tuning of the parameters used in: canny, hough, region masking and line drawing segments of the pipeline.
